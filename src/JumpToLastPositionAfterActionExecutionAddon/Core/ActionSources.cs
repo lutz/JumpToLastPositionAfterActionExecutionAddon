@@ -8,6 +8,8 @@ namespace JumpToLastPositionAfterActionExecution
 {
     public class ActionSources : List<ActionSource>
     {
+        #region Methods
+
         public EntryPoint GetSourceEntryPoint(MainForm form)
         {
             return this.FirstOrDefault(obj => obj.Form.Equals(form))?.EntryPoint;
@@ -34,5 +36,7 @@ namespace JumpToLastPositionAfterActionExecution
             var obj = GetActionSource(form);
             if (obj != null) obj.EntryPoint = null;
         }
+
+        #endregion
     }
 }
