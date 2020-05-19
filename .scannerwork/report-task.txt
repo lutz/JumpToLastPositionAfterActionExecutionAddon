@@ -1,0 +1,7 @@
+organization=lutz
+projectKey=lutz_JumpToLastPositionAfterActionExecutionAddon
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.8111
+dashboardUrl=https://sonarcloud.io/dashboard?id=lutz_JumpToLastPositionAfterActionExecutionAddon
+ceTaskId=AXIsHIT8fOxSja6fOjFn
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AXIsHIT8fOxSja6fOjFn
