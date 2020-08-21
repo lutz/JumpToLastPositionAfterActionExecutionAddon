@@ -10,20 +10,11 @@ namespace JumpToLastPositionAfterActionExecution
     {
         #region Methods
 
-        public EntryPoint GetSourceEntryPoint(MainForm form)
-        {
-            return this.FirstOrDefault(obj => obj.Form.Equals(form))?.EntryPoint;
-        }
+        public EntryPoint GetSourceEntryPoint(MainForm form) => this.FirstOrDefault(obj => obj.Form.Equals(form))?.EntryPoint;
 
-        public ActionSource GetActionSource(MainForm mainForm)
-        {
-            return this.FirstOrDefault(obj => obj.Form.Equals(mainForm));
-        }
+        public ActionSource GetActionSource(MainForm mainForm) => this.FirstOrDefault(obj => obj.Form.Equals(mainForm));
 
-        public ActionSource GetActionSource(PDFViewWPF viewer)
-        {
-            return this.FirstOrDefault(obj => obj.Viewer.Equals(viewer));
-        }
+        public ActionSource GetActionSource(PDFViewWPF viewer) => this.FirstOrDefault(obj => obj.Viewer.Equals(viewer));
 
         public void RemoveAt(MainForm form)
         {

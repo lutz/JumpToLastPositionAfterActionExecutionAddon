@@ -25,10 +25,7 @@ namespace JumpToLastPositionAfterActionExecution
 
         #region Constructors
 
-        public Addon()
-        {
-            _actionSources = new ActionSources();
-        }
+        public Addon() => _actionSources = new ActionSources();
 
         #endregion
 
@@ -48,8 +45,6 @@ namespace JumpToLastPositionAfterActionExecution
             viewer.OnAction += Viewer_OnAction;
 
             _actionSources.Add(new ActionSource(mainForm, viewer));
-
-            base.OnHostingFormLoaded(mainForm);
         }
 
         public override void OnApplicationIdle(MainForm mainForm)
@@ -58,7 +53,6 @@ namespace JumpToLastPositionAfterActionExecution
             {
                 button.Visible = mainForm.PreviewControl.ActivePreviewType == PreviewType.Pdf && _actionSources.GetSourceEntryPoint(mainForm) != null;
             }
-            base.OnApplicationIdle(mainForm);
         }
 
         public override void OnBeforePerformingCommand(MainForm mainForm, BeforePerformingCommandEventArgs e)
@@ -71,8 +65,6 @@ namespace JumpToLastPositionAfterActionExecution
                 }
                 e.Handled = true;
             }
-
-            base.OnBeforePerformingCommand(mainForm, e);
         }
 
         public override void OnLocalizing(MainForm mainForm)
@@ -81,7 +73,6 @@ namespace JumpToLastPositionAfterActionExecution
             {
                 button.Text = Resources.Button_JumpToLastPosition;
             }
-            base.OnLocalizing(mainForm);
         }
 
         #endregion
