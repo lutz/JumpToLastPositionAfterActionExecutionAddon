@@ -51,7 +51,7 @@ namespace JumpToLastPositionAfterActionExecution
         {
             if (mainForm.GetPreviewCommandbar(MainFormPreviewCommandbarId.Toolbar).GetCommandbarMenu(MainFormPreviewCommandbarMenuId.Tools).GetCommandbarButton(Keys_Button_JumpToLastPosition) is CommandbarButton button)
             {
-                button.Visible = mainForm.PreviewControl.ActivePreviewType == PreviewType.Pdf && _actionSources.GetSourceEntryPoint(mainForm) != null;
+                button.Enabled = mainForm.PreviewControl.ActivePreviewType == PreviewType.Pdf && _actionSources.GetSourceEntryPoint(mainForm) != null;
             }
         }
 
